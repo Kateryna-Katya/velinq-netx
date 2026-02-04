@@ -1,15 +1,53 @@
 <footer class="footer">
-  <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
+  <div class="container footer__grid">
+    <div class="footer__col">
+      <a href="/" class="logo footer__logo">
+        <span class="logo__text"><?= $domainTitle ?></span>
       </a>
-    </p>
+      <p class="footer__description">
+        Технологии, которые работают на вас. Переосмыслите подход к развитию карьеры в эпоху AI.
+      </p>
+    </div>
+
+    <div class="footer__col">
+      <h4 class="footer__title">Меню</h4>
+      <ul class="footer__links">
+        <li><a href="#hero">Главная</a></li>
+        <li><a href="#about">О платформе</a></li>
+        <li><a href="#benefits">Преимущества</a></li>
+        <li><a href="#blog">Блог</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4 class="footer__title">Документы</h4>
+      <ul class="footer__links">
+        <li><a href="privacy.php">Privacy Policy</a></li>
+        <li><a href="terms.php">Terms of Service</a></li>
+        <li><a href="cookies.php">Cookies Policy</a></li>
+        <li><a href="personal-data-policy.php">Personal Data</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4 class="footer__title">Контакты</h4>
+      <ul class="footer__contact-info">
+        <li>
+          <i data-lucide="phone" class="icon-sm"></i>
+          <a href="tel:+442079460681">+44 20 7946 0681</a>
+        </li>
+        <li>
+          <i data-lucide="mail" class="icon-sm"></i>
+          <a href="mailto:hello@<?= $fullDomain ?>">hello@<?= $fullDomain ?></a>
+        </li>
+        <li>
+          <i data-lucide="map-pin" class="icon-sm"></i>
+          <span>221B Baker St, London NW1 6XE, UK</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <p>&copy; 2026 <?= $domainTitle ?>. Все права защищены. Предложение активно только в странах ЕС.</p>
   </div>
 </footer>
