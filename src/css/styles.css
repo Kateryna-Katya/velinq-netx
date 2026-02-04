@@ -386,7 +386,7 @@ h4 {
 }
 
 .section-title {
-    font-size: 2.5rem;
+    font-size: 2.0rem;
     margin-bottom: 20px;
 }
 
@@ -975,5 +975,197 @@ h4 {
 
     .contact__form-wrapper {
         padding: 30px 20px;
+    }
+}
+/* Cookie Popup */
+.cookie-popup {
+    position: fixed;
+    bottom: -100px;
+    left: 20px;
+    right: 20px;
+    max-width: 500px;
+    background: white;
+    padding: 20px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    transition: var(--transition);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.cookie-popup.active {
+    bottom: 20px;
+}
+
+.cookie-popup p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.cookie-popup a {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.btn--sm {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+}
+
+/* Mobile Menu */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 3000;
+    padding: 30px;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-nav.active {
+    left: 0;
+}
+
+.mobile-nav__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.close-menu {
+    font-size: 2.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.mobile-nav__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.mobile-nav__link {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text);
+}
+
+/* Юридические страницы (стили из ТЗ) */
+.pages {
+    padding: 140px 0 80px;
+}
+
+.pages h1 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+.pages h2 {
+    margin: 40px 0 20px;
+    font-size: 1.8rem;
+}
+
+.pages p {
+    margin-bottom: 20px;
+    color: var(--text-muted);
+}
+
+.pages ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    color: var(--text-muted);
+}
+
+.pages li {
+    margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+
+    /* Секция в целом */
+    .benefits {
+        padding: 60px 0;
+    }
+
+    /* Статистика (счетчики) */
+    .benefits__stats {
+        flex-direction: column;
+        /* Выстраиваем в колонку */
+        gap: 40px;
+        margin-bottom: 50px;
+    }
+
+    .stat-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-item__number {
+        font-size: 2.8rem;
+        /* Чуть меньше для мобильных */
+        margin-bottom: 5px;
+    }
+
+    .stat-item__text {
+        max-width: 200px;
+        font-size: 0.9rem;
+    }
+
+    /* Сетка карточек */
+    .benefits__grid {
+        grid-template-columns: 1fr;
+        /* Одна карточка в ряд */
+        gap: 20px;
+    }
+
+    .benefit-card {
+        flex-direction: column;
+        /* Иконка сверху, текст снизу */
+        align-items: center;
+        text-align: center;
+        padding: 30px 20px;
+        border-radius: 24px;
+        /* Немного уменьшаем скругление */
+    }
+
+    .benefit-card__icon {
+        margin: 0 0 20px 0;
+        /* Центрируем иконку и даем отступ вниз */
+        width: 60px;
+        height: 60px;
+    }
+
+    .benefit-card h3 {
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+    }
+
+    .benefit-card p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+}
+
+/* Оптимизация для совсем маленьких экранов (iPhone SE и т.д.) */
+@media (max-width: 375px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .stat-item__number {
+        font-size: 2.4rem;
     }
 }
